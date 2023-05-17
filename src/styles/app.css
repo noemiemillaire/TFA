@@ -1,0 +1,100 @@
+body {
+  font-family: "astoria-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #222;
+}
+
+.paragraphe {
+  font-size: 17px;
+  line-height: 180%;
+}
+
+.paragraphe--accent {
+  font-size: 25px;
+  color: #D7DF0C;
+  font-weight: 400;
+}
+
+.titre--small {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.titre {
+  font-size: 29px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+.titre--big {
+  font-size: 41px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+.sondage__carre {
+  display: none;
+}
+
+.sondage__carre {
+  display: none;
+}
+
+.sondage__el {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sondage__el img {
+  width: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #CFC1AB;
+  border-radius: 18px;
+}
+.sondage__el .paragraphe--accent {
+  width: 60%;
+  text-align: center;
+}
+.sondage__el .paragraphe--accent span {
+  font-size: 50px;
+}
+
+.fonct__illu {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 96vh;
+  width: 40%;
+  border-radius: 45px;
+  background-color: #D7DF0C;
+  top: 20px;
+  text-align: center;
+  color: #4D7C04;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fonct__illu img {
+  width: 70%;
+}
+
+#video {
+  height: 70vh;
+  width: 98%;
+  margin: auto;
+  background-color: #4D7C04;
+  border-radius: 45px;
+}
+
+img {
+  width: 200px;
+}
+
+.logo {
+  font-size: 17px;
+  color: #4D7C04;
+  font-weight: 400;
+}/*# sourceMappingURL=app.css.map */
