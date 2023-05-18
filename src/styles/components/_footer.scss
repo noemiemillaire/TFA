@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    text-align: center;
+
+    height: 150px;
+    padding: 0 15px;
+    margin-top: 120px;
+
+    .subnav a{
+        text-decoration: none;
+        color: #222;
+        font-weight: 400;
+    }
+}
