@@ -24,7 +24,7 @@ function parallax(){
 
     parallaxEls.forEach(function(parallaxEl){
         let speed = parallaxEl.getAttribute("data-speed");
-        let parallaxSpeed = scrollTop * speed / 60
+        let parallaxSpeed = scrollTop * speed / 110
 
         parallaxEl.style.transform = "translateX(" + parallaxSpeed + "px)";
     });
