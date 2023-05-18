@@ -1,0 +1,14 @@
+#prest{
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prest__el{
+    margin-top: 30%;
+
+    .titre--big{
+        margin-bottom: 15px;
+    }
+}

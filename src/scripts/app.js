@@ -13,3 +13,26 @@ menuBurger.addEventListener('click', function(){
 menu__lien.addEventListener('click', function(){
     menu.classList.remove('menu--open');
 })
+
+//parallax
+const parallaxEls = document.querySelectorAll(".ligne");
+
+window.addEventListener("scroll", parallax);
+
+function parallax(){
+    let scrollTop = window.pageYOffset;
+
+    parallaxEls.forEach(function(parallaxEl){
+        let speed = parallaxEl.getAttribute("data-speed");
+        let parallaxSpeed = scrollTop * speed / 60
+
+        parallaxEl.style.transform = "translateX(" + parallaxSpeed + "px)";
+    });
+
+    parallaxContent.forEach(function(parallaxCont){
+        let speed = parallaxCont.getAttribute("data-speed");
+        let parallaxSpeed = -scrollTop * speed / 60;
+        
+        parallaxCont.style.transform = "translateY(" + parallaxSpeed + "px)";
+    });
+}
