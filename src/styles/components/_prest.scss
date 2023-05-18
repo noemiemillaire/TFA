@@ -1,5 +1,5 @@
 #prest{
-    height: 110vh;
+    height: 115vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,3 +12,28 @@
         margin-bottom: 15px;
     }
 }
+
+.title__anim{
+    overflow: hidden;
+     display: block;
+ }
+ 
+ .title__anim span{
+     display: block;
+     transform: translateY(100%) rotate(-3deg);
+     animation: up 1.5s .3s forwards cubic-bezier(0.22, 1, 0.36, 1);
+ }
+ 
+ .title__anim:nth-child(2) span{
+     animation-delay: 0.4s;
+ }
+ 
+ .title__anim:nth-child(3) span{
+     animation-delay: 0.5s;
+ }
+ 
+ @keyframes up{
+     to{
+         transform: translateY(0) rotate(0deg);
+     }
+ }
