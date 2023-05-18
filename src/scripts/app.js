@@ -28,11 +28,4 @@ function parallax(){
 
         parallaxEl.style.transform = "translateX(" + parallaxSpeed + "px)";
     });
-
-    parallaxContent.forEach(function(parallaxCont){
-        let speed = parallaxCont.getAttribute("data-speed");
-        let parallaxSpeed = -scrollTop * speed / 60;
-        
-        parallaxCont.style.transform = "translateY(" + parallaxSpeed + "px)";
-    });
 }
