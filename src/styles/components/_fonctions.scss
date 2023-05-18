@@ -1,0 +1,34 @@
+#fonct .fonct__el:first-of-type{
+    margin-top: 30px;
+}
+
+.fonct__el{
+    text-align: center;
+    margin: 120px 0;
+    box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+}
+
+.fonct__illu{
+    width: 100%;
+    padding: 30px 0 15px 0;
+    box-sizing: border-box;
+    background-color: #D7DE16;
+    border-radius: 60px 60px 0 0;
+
+
+    color: #4D7C04;
+
+    img{
+        width: 50%;
+    }
+
+    .titre{
+        margin: 5px 0 0 0;
+        padding: 0 30px;
+    }
+}
+
+.fonct__text{
+    padding: 20px 15px;
+}
