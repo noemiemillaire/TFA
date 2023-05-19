@@ -14,7 +14,7 @@
     }
 }
 
-@media (max-width: 1019px){
+@media (max-width: 619px){
     .menu__icon{
         width: 50px;
         position: fixed;
@@ -61,8 +61,39 @@
     }
 }
 
-@media (min-width: 1020px){
+
+
+@media (min-width: 620px){
     .menu__icon{
         display: none;
+    }
+
+    .logo{
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        margin-top: 30px;
+    }
+
+    .menu__liste{
+        list-style: none;
+        display: contents;
+
+        a, a:visited{
+            color: #222;
+            text-decoration: none;
+            
+        }
+
+        .menu__el{
+            padding: 0 5px;
+            margin: 0 10px;
+        }
     }
 }

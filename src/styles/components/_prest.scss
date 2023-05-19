@@ -47,3 +47,20 @@
     }
 
  }
+
+
+ @media (min-width: 470px){
+
+    #prest{
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .prest__el{
+        margin-bottom: 25%;
+    }
+
+
+ }
