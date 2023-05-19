@@ -32,3 +32,44 @@
 .fonct__text{
     padding: 20px 15px;
 }
+
+
+
+@media (min-width: 470px){
+
+
+    .fonct__el{
+        display: flex;
+        height: 50vh;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        box-shadow: unset;
+
+        width: 100%;
+    }
+
+    .fonct__illu{
+        border-radius: 60px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 65%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .fonct__text{
+        width: 60%;
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+}
