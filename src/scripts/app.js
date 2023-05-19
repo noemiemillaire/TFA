@@ -70,12 +70,11 @@ const sondageAll = document.querySelectorAll(".sondage__el img");
 
 sondageAll.forEach((boucle) => {
   gsap.to(boucle, {
-    duration: 0.2,
     scrollTrigger: {
       trigger: boucle,
       start: "top center",
       end: "bottom 30%",
-      toggleActions: "play none none none",
+      toggleActions: "play none play none",
       onEnter: () => {
         boucle.classList.add("etoile--svg");
       },
