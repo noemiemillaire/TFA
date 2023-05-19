@@ -52,3 +52,17 @@
 .etoile--svg.sond__img{
     background-color: #4D7C04;
 }
+
+
+@media (min-width: 470px){
+
+    #sondage{
+        margin-right: 7%;
+        margin-left: 7%;
+    }
+
+    .sondage__el img{
+        width: 35%;
+    }
+
+}
