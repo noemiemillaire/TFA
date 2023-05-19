@@ -35,3 +35,28 @@ body {
   line-height: 130%;
   font-weight: 400;
 }
+
+@media (min-width: 470px){
+
+  .paragraphe{
+    font-size: 18px;
+  }
+  
+  .paragraphe--accent{
+    font-size: 28px;
+  }
+  
+  .titre--small{
+    font-size: 18px;
+  }
+  
+  .titre{
+    font-size: 33px;
+  }
+  
+  .titre--big{
+    font-size: 47px;
+    line-height: 135%;
+  }
+
+}
