@@ -1,11 +1,12 @@
+#sondage{
+    margin-bottom: 200px;
+}
+
 
 .sondage__carre{
     display: none;
 }
 
-.sondage__carre{
-    display: none;
-}
 
 .sondage__el{
     display: flex;
@@ -20,6 +21,7 @@
         height: max-content;
         background-color: #CFC1AB;
         border-radius: 18px;
+        transition: 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     }
 
     .paragraphe--accent{
@@ -36,8 +38,17 @@
 .sondage__side {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-  }
+}
 
-#sondage{
-    margin-bottom: 200px;
+
+
+.etoile--svg{
+    background-image: url(../../assets/images/etoiles.svg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.etoile--svg.sond__img{
+    background-color: #4D7C04;
 }
