@@ -13,6 +13,8 @@
     align-items: center;
     margin: 0 0 90px 0;
 
+    scroll-snap-align: center;
+
     img{
         width: 40%;
         height: max-content;
@@ -30,6 +32,11 @@
         }
     }
 }
+
+.sondage__side {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
 
 #sondage{
     margin-bottom: 200px;

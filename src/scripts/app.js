@@ -61,3 +61,29 @@ accentAll.forEach((boucle) => {
   });
 
 });
+
+
+
+//anim sondage
+
+const sondageAll = document.querySelectorAll(".sondage__el img");
+
+sondageAll.forEach((boucle) => {
+  gsap.to(boucle, {
+    duration: 0.2,
+    backgroundColor: "#4D7C04",
+    scrollTrigger: {
+      trigger: boucle,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play play play play",
+      markers: true,
+      onLeave: () => {
+        gsap.to(boucle, {
+          backgroundColor: "#CFC1AB",
+          duration: 0.3,
+        });
+      },
+    },
+  });
+});
