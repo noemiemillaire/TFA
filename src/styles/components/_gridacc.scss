@@ -70,3 +70,27 @@
 .tabl__el.paragraphe :nth-child(1){
         background-color: #4D7C04;
 }
+
+
+
+
+@media (min-width: 470px){
+    .prest__tabl{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+
+    .ligne{
+        grid-template-columns: repeat(6, 150px);
+        grid-gap: 15px;
+    
+        margin-bottom: 15px;
+        margin-left: -165px;
+
+        .paragraphe{
+            font-size: 23px;
+        }
+    }
+
+
+}
