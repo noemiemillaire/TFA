@@ -73,8 +73,9 @@ sondageAll.forEach((boucle) => {
     scrollTrigger: {
       trigger: boucle,
       start: "top center",
-      end: "bottom 30%",
-      toggleActions: "play none play none",
+      end: "90% 30%",
+      markers:true,
+      toggleActions: "play restart play restart",
       onEnter: () => {
         boucle.classList.add("etoile--svg");
       },
@@ -85,3 +86,23 @@ sondageAll.forEach((boucle) => {
   });
 });
 
+
+
+// scroll snap sondage
+
+const sondageEl = document.querySelectorAll(".sondage__el");
+
+sondageEl.forEach((el) => {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "center center",
+      end: "bottom center",
+      toggleActions: "play play play play",
+      snap: {
+        snapTo: "center",
+        duration: 0.1,
+      },
+    },
+  });
+});
