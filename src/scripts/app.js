@@ -74,7 +74,6 @@ sondageAll.forEach((boucle) => {
       trigger: boucle,
       start: "top center",
       end: "90% 30%",
-      markers:true,
       toggleActions: "play restart play restart",
       onEnter: () => {
         boucle.classList.add("etoile--svg");
@@ -97,10 +96,9 @@ sondageEl.forEach((el) => {
     scrollTrigger: {
       trigger: el,
       start: "center center",
-      end: "bottom center",
       toggleActions: "play play play play",
       snap: {
-        snapTo: "center",
+        snapTo: "proximity",
         duration: 0.1,
       },
     },
