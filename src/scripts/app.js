@@ -30,7 +30,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     menu.style.top = "0";
   } else {
-    menu.style.top = "-50px";
+    menu.style.top = "-65px";
   }
   prevScrollpos = currentScrollPos;
 }
