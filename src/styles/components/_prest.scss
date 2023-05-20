@@ -1,5 +1,4 @@
 #prest{
-    height: 130vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -7,39 +6,44 @@
 
 .prest__el{
     margin-top: 25%;
+    margin-bottom: 45%;
 
     .titre--big{
         margin-bottom: 15px;
     }
 }
 
+
+//animation titre
 .title__anim{
     overflow: hidden;
-     display: block;
- }
+    display: block;
+}
  
- .title__anim span{
-     display: block;
-     transform: translateY(100%) rotate(-3deg);
-     animation: up 1.5s .3s forwards cubic-bezier(0.22, 1, 0.36, 1);
- }
+.title__anim span{
+    display: block;
+    transform: translateY(100%) rotate(-3deg);
+    animation: up 1.5s .3s forwards cubic-bezier(0.22, 1, 0.36, 1);
+}
  
- .title__anim:nth-child(2) span{
-     animation-delay: 0.4s;
- }
+.title__anim:nth-child(2) span{
+    animation-delay: 0.4s;
+}
  
- .title__anim:nth-child(3) span{
-     animation-delay: 0.5s;
- }
+.title__anim:nth-child(3) span{
+    animation-delay: 0.5s;
+}
  
- @keyframes up{
-     to{
-         transform: translateY(0) rotate(0deg);
-     }
- }
+@keyframes up{
+    to{
+        transform: translateY(0) rotate(0deg);
+    }
+}
 
 
- @media (min-width: 470px){
+
+//tab
+@media (min-width: 470px){
 
     #prest{
         height: unset;
@@ -54,11 +58,12 @@
         margin-left: 7%;
     }
 
- }
+}
 
 
 
- @media (min-width: 1000px){
+//desktop
+@media (min-width: 1000px){
 
     #prest{
         flex-direction: row;

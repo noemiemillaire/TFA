@@ -60,3 +60,28 @@ body {
   }
 
 }
+
+@media (min-width: 1000px){
+
+  .paragraphe{
+    font-size: 18px;
+  }
+  
+  .paragraphe--accent{
+    font-size: 30px;
+  }
+  
+  .titre--small{
+    font-size: 17px;
+  }
+  
+  .titre{
+    font-size: 37px;
+  }
+  
+  .titre--big{
+    font-size: 53px;
+    line-height: 135%;
+  }
+
+}

@@ -2,19 +2,15 @@
     margin-bottom: 200px;
 }
 
-
 .sondage__carre{
     display: none;
 }
-
 
 .sondage__el{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin: 0 0 35% 0;
-
-    scroll-snap-align: center;
 
     img{
         width: 40%;
@@ -35,14 +31,7 @@
     }
 }
 
-
-.sondage__side {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-
-
+//etat actif mobile
 .etoile--svg{
     background-image: url(../../assets/images/etoiles.svg);
     background-position: center;
@@ -55,6 +44,7 @@
 }
 
 
+//tab
 @media (min-width: 470px){
 
     #sondage{
@@ -63,6 +53,7 @@
     }
 
     .sondage__el img{
+        //changement taille
         width: 35%;
     }
 
