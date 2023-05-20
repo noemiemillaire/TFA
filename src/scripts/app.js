@@ -22,6 +22,20 @@ menu__lien.addEventListener('click', function(){
 })
 
 
+//nav bar
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    menu.style.top = "0";
+  } else {
+    menu.style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 
 //parallax
 

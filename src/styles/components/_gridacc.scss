@@ -117,6 +117,7 @@
         justify-content: end;
 
         margin-left: 0;
+        z-index: 10;
     }
 
     .ligne{
@@ -124,10 +125,6 @@
         grid-auto-rows: 140px;
         grid-gap: 10px;
         margin: 0;
-    }
-
-    .lign2{
-        order: 3;
     }
 
 }
