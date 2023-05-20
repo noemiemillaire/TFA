@@ -36,7 +36,11 @@ function parallax(){
         let speed = parallaxEl.getAttribute("data-speed");
         let parallaxSpeed = scrollTop * speed / 160
 
-        parallaxEl.style.transform = "translateX(" + parallaxSpeed + "px)";
+        if (window.innerWidth > 1000) {
+            parallaxEl.style.transform = "translateY(" + parallaxSpeed + "px)";
+        } else {
+            parallaxEl.style.transform = "translateX(" + parallaxSpeed + "px)";
+        }
     });
 }
 

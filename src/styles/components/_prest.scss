@@ -41,7 +41,15 @@
 
  @media (min-width: 470px){
 
+    #prest{
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     .prest__el{
+        margin-bottom: 35%;
         margin-right: 14%;
         margin-left: 7%;
     }
@@ -49,17 +57,18 @@
  }
 
 
- @media (min-width: 470px){
+
+ @media (min-width: 1000px){
 
     #prest{
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 100vh;
+        overflow: hidden;
     }
 
     .prest__el{
-        margin-bottom: 25%;
+        margin-top: 15%;
     }
 
 

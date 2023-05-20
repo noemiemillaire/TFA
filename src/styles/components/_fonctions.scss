@@ -53,8 +53,7 @@
 
 @media (min-width: 460px){
     .fonct__el{
-        width: 90%;
-        margin: 160px auto;
+        margin: 160px 7%;
     }
 
     .fonct__illu{
@@ -79,7 +78,7 @@
     .fonct__el{
         display: flex;
         height: 96vh;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
 
         box-shadow: unset;
