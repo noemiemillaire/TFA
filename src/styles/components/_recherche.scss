@@ -41,3 +41,32 @@
 
     }
 }
+
+
+@media (min-width: 1000px){
+
+    .recherche__el{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+
+        .recherche__text{
+            width: 70%;
+            margin-bottom: 100px;
+        }
+    }
+
+    #recherches{
+
+        .titre{
+            margin-top: 30px;
+            width: 30%;
+        }
+
+        .paragraphe{
+            margin-left: 0;
+        }
+    }
+
+}
