@@ -85,6 +85,7 @@
         width: calc(100% + 40px);
         margin-left: -20px;
 
+        grid-template-rows: repeat(3, 150px);
         grid-gap: 15px;
     }
 
@@ -106,8 +107,13 @@
 //grande tab
 @media (min-width: 600px){
 
+    .prest__tabl{
+        grid-template-rows: repeat(3, 160px);
+        grid-gap: 15px;
+    }
+
     .ligne {
-        //changement taille cellules
+        //changement taille 
         grid-template-columns: repeat(6, 160px);
         margin-left: -85px;
     }
