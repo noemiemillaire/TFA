@@ -105,3 +105,60 @@ sondageAll.forEach((boucle) => {
     },
   });
 });
+
+
+
+
+//sondage desk
+
+  //selection btn
+const btnEuro = document.querySelector('.euro');
+const btnNaturel = document.querySelector('.naturel');
+const btnPlanet = document.querySelector('.planet');
+const btnInterro = document.querySelector('.interrogation');
+
+  //selection contenu
+const txtEuro = document.querySelector('.euro--txt');
+const txtNaturel = document.querySelector('.naturel--txt');
+const txtPlanet = document.querySelector('.planet--txt');
+const txtInterro = document.querySelector('.interrogation--txt');
+
+
+const elements = [txtEuro, txtNaturel, txtPlanet, txtInterro];
+const btnElements = [btnEuro, btnNaturel, btnPlanet, btnInterro];
+
+
+function hideAllElements() {
+  elements.forEach(function(element) {
+    element.classList.remove('visible');
+    element.classList.remove('etoile--svg');
+  });
+
+  btnElements.forEach(function(btnelement) {
+    btnelement.classList.remove('etoile--svg');
+  });
+}
+
+btnEuro.addEventListener('click', function() {
+  hideAllElements();
+  txtEuro.classList.add('visible');
+  btnEuro.classList.add('etoile--svg');
+});
+
+btnNaturel.addEventListener('click', function() {
+  hideAllElements();
+  txtNaturel.classList.add('visible');
+  btnNaturel.classList.add('etoile--svg');
+});
+
+btnPlanet.addEventListener('click', function() {
+  hideAllElements();
+  txtPlanet.classList.add('visible');
+  btnPlanet.classList.add('etoile--svg');
+});
+
+btnInterro.addEventListener('click', function() {
+  hideAllElements();
+  txtInterro.classList.add('visible');
+  btnInterro.classList.add('etoile--svg');
+});
