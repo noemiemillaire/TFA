@@ -5,13 +5,20 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-//burger menu
-
 const menuBurger = document.querySelector('.menu__icon');
 const menu = document.querySelector('.nav')
 const menu__lien = document.querySelector('.menu__el')
+
+const parallaxEls = document.querySelectorAll(".ligne");
+
+const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
+
+const sondageAll = document.querySelectorAll(".sondage__el img");
+
+
+
+
+//burger menu
 
 menuBurger.addEventListener('click', function(){
     menu.classList.toggle('menu--open');
@@ -37,9 +44,8 @@ window.onscroll = function() {
 
 
 
-//parallax
 
-const parallaxEls = document.querySelectorAll(".ligne");
+//parallax
 
 window.addEventListener("scroll", parallax);
 
@@ -60,10 +66,8 @@ function parallax(){
 
 
 
+
 //anim texte 
-
-const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
-
 
 accentAll.forEach((boucle) => {
 
@@ -82,9 +86,8 @@ accentAll.forEach((boucle) => {
 
 
 
-//anim sondage
 
-const sondageAll = document.querySelectorAll(".sondage__el img");
+//anim sondage
 
 sondageAll.forEach((boucle) => {
   gsap.to(boucle, {
@@ -98,26 +101,6 @@ sondageAll.forEach((boucle) => {
       },
       onLeave: () => {
         boucle.classList.remove("etoile--svg");
-      },
-    },
-  });
-});
-
-
-
-// scroll snap sondage
-
-const sondageEl = document.querySelectorAll(".sondage__el");
-
-sondageEl.forEach((el) => {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "center center",
-      toggleActions: "play play play play",
-      snap: {
-        snapTo: "proximity",
-        duration: 0.1,
       },
     },
   });
