@@ -12,6 +12,7 @@ const menu__lien = document.querySelectorAll('.menu__el')
 const parallaxEls = document.querySelectorAll(".ligne");
 
 const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
+const titre__rech = document.querySelectorAll('#recherches .titre')
 
 const sondageAll = document.querySelectorAll(".sondage__el img");
 
@@ -39,15 +40,15 @@ menu__lien.forEach((lien) => {
 
 //nav bar
 
-var prevScrollpos = window.pageYOffset;
+var menuHide = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (menuHide > currentScrollPos) {
     menu.style.top = "0";
   } else {
     menu.style.top = "-65px";
   }
-  prevScrollpos = currentScrollPos;
+  menuHide = currentScrollPos;
 }
 
 
@@ -75,7 +76,31 @@ function parallax(){
 
 
 
-//anim texte 
+//anim titre recherche
+
+if (window.innerWidth > 1000) {
+
+  titre__rech.forEach((boucle) => {
+
+  gsap.to(boucle, {
+    duration: 0.3,
+    x: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: boucle,
+      start: "top 95%",
+      toggleActions: "play none none none"
+    },
+  });
+
+});
+
+}
+
+
+
+
+//anim texte accent
 
 accentAll.forEach((boucle) => {
 
