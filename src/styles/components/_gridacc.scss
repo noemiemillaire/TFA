@@ -154,6 +154,27 @@
         }
     }
 
+    .lign1, .lign3{
+        margin-top: -45px;
+    }
+
+    .lign3 :nth-child(1){
+        order: -1;
+    }
+
+    .lign3 :nth-child(3){
+        order: -4;
+    }
+
+    .lign3 :nth-child(4){
+        order: -5;
+    }
+
+    .lign3 :nth-child(6){
+        order: -3;
+    }
+
+
     // +10 starter recipe
     .lign3 p{
         display: inline-grid;

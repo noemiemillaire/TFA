@@ -74,21 +74,23 @@
 
 @media (min-width: 1000px){
 
-
     .fonct__el{
         display: flex;
-        height: 96vh;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: nowrap;
 
         box-shadow: unset;
-
+        
+        height: 96vh;
         width: 100%;
+        margin: 180px 0;
     }
 
     .fonct__illu{
         border-radius: 40px;
+
         width: 40%;
+        height: 100%;
 
         img{
             width: 65%;
@@ -98,6 +100,10 @@
 
     .fonct__text{
         width: 60%;
+        height: 100%;
+        padding: 0 0 10px 20px;
+        box-sizing: border-box;
+
         text-align: left;
         justify-content: space-between;
     }
