@@ -162,3 +162,25 @@ btnInterro.addEventListener('click', function() {
   txtInterro.classList.add('visible');
   btnInterro.classList.add('etoile--svg');
 });
+
+
+
+
+//section video
+
+const sectVideo = document.querySelector('#video')
+
+gsap.to(sectVideo, {
+
+  scale: 1.1,
+  borderRadius: "0%",
+
+  scrollTrigger: {
+    trigger: sectVideo,
+    start: "top 95%",
+    end: "center center",
+    markers:true,
+    scrub:true,
+    toggleActions: "play restart play restart",
+  },
+});

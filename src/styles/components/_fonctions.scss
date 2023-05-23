@@ -74,13 +74,17 @@
 
 @media (min-width: 1000px){
 
+    #fonct{
+        margin-bottom: 28%;
+    }
+
     .fonct__el{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
 
         box-shadow: unset;
-        
+
         height: 96vh;
         width: 100%;
         margin: 180px 0;

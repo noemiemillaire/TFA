@@ -1,13 +1,14 @@
 #video{
-    width: 100%;
+    width: 98%;
+    margin: auto;
     height: 40vh;
     background-color: #4D7C04;
-    border-radius: 18px;
+    border-radius: 20%;
 }
 
 @media (min-width: 1000px){
 
     #video{
-        height: 80vh;
+        height: 110vh;
     }
 }
