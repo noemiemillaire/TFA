@@ -72,7 +72,7 @@
 
     .logo{
         margin-top: 0;
-        margin-right: 10px;
+        margin-right: 14px;
     }
 
     .nav{
@@ -99,12 +99,37 @@
         a, a:visited{
             color: #222;
             text-decoration: none;
-            
         }
 
         .menu__el{
-            padding: 0 5px;
-            margin: 0 10px;
+            margin: 0 18px;
+            position: relative;
+
+            :hover{
+                color: #4D7C04;
+            }
+        }
+
+        .lien-anim{
+            &::after {
+                background: #4D7C04;
+                bottom: -1px;
+                content: '';
+                height: 1px;
+                left: -3px;
+                position: absolute;
+                width: 0%;
+                
+                -webkit-transition: width 0.2s;
+                -moz-transition: width 0.2s;
+                transition: width 0.2s;
+              }
+              
+              &:hover {
+               &::after {
+                  width: 105%;
+                }
+              }
         }
     }
 }

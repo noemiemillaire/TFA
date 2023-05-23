@@ -78,7 +78,7 @@ function parallax(){
 
 //anim titre recherche
 
-if (window.innerWidth > 1000) {
+if (window.innerWidth >= 1000) {
 
   titre__rech.forEach((boucle) => {
 
@@ -110,7 +110,7 @@ accentAll.forEach((boucle) => {
     opacity: 1,
     scrollTrigger: {
       trigger: boucle,
-      start: "top 80%",
+      start: "bottom 75%",
       toggleActions: "play none none none"
     },
   });
