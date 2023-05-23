@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const menuBurger = document.querySelector('.menu__icon');
 const menu = document.querySelector('.nav')
-const menu__lien = document.querySelector('.menu__el')
+const menu__lien = document.querySelectorAll('.menu__el')
 
 const parallaxEls = document.querySelectorAll(".ligne");
 
@@ -15,6 +15,7 @@ const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
 
 const sondageAll = document.querySelectorAll(".sondage__el img");
 
+const sectVideo = document.querySelector('#video')
 
 
 
@@ -24,9 +25,16 @@ menuBurger.addEventListener('click', function(){
     menu.classList.toggle('menu--open');
 })
 
-menu__lien.addEventListener('click', function(){
+  //enlever menu au click
+menu__lien.forEach((lien) => {
+
+  lien.addEventListener('click', function(){
     menu.classList.remove('menu--open');
-})
+  })
+
+});
+
+
 
 
 //nav bar
@@ -45,7 +53,7 @@ window.onscroll = function() {
 
 
 
-//parallax
+//parallax grille
 
 window.addEventListener("scroll", parallax);
 
@@ -98,9 +106,6 @@ sondageAll.forEach((boucle) => {
       toggleActions: "play restart play restart",
       onEnter: () => {
         boucle.classList.add("etoile--svg");
-      },
-      onLeave: () => {
-        boucle.classList.remove("etoile--svg");
       },
     },
   });
@@ -168,7 +173,7 @@ btnInterro.addEventListener('click', function() {
 
 //section video
 
-const sectVideo = document.querySelector('#video')
+
 
 gsap.to(sectVideo, {
 
@@ -179,7 +184,6 @@ gsap.to(sectVideo, {
     trigger: sectVideo,
     start: "top 95%",
     end: "center center",
-    markers:true,
     scrub:true,
     toggleActions: "play restart play restart",
   },
