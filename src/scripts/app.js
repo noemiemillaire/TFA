@@ -3,6 +3,7 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const menuBurger = document.querySelector('.menu__icon');
@@ -12,9 +13,9 @@ const menu__lien = document.querySelectorAll('.menu__el')
 const parallaxEls = document.querySelectorAll(".ligne");
 
 const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
-const titre__rech = document.querySelectorAll('#recherches .titre')
 
-const sondageAll = document.querySelectorAll(".sondage__el img");
+const sondageEl = document.querySelectorAll(".sondage__el");
+const sondageImg = document.querySelectorAll(".sondage__el img");
 
 const sectVideo = document.querySelector('#video')
 
@@ -86,7 +87,7 @@ accentAll.forEach((boucle) => {
     opacity: 1,
     scrollTrigger: {
       trigger: boucle,
-      start: "bottom 75%",
+      start: "top 75%",
       toggleActions: "play none none none"
     },
   });
@@ -98,8 +99,10 @@ accentAll.forEach((boucle) => {
 
 //anim sondage
 
-sondageAll.forEach((boucle) => {
+sondageImg.forEach((boucle) => {
+
   gsap.to(boucle, {
+
     scrollTrigger: {
       trigger: boucle,
       start: "top center",
@@ -109,13 +112,58 @@ sondageAll.forEach((boucle) => {
         boucle.classList.add("etoile--svg");
       },
     },
+
   });
+
 });
 
 
 
+//pin mobile
+if (window.innerWidth < 1000) {
 
-//sondage desk
+  sondageEl.forEach((sondageList) => {
+
+    gsap.to(sondageList, {
+
+      scrollTrigger: {
+        trigger: sondageList,
+        start: "center center",
+        pin: true,
+        toggleActions: "play play play play",
+      },
+
+    });
+
+  });
+
+}
+
+
+//stop scroll sondage desktop
+if (window.innerWidth > 1000) {
+
+  gsap.to("#sondage", {
+
+    scrollTrigger: {
+      trigger: "#sondage",
+      start: "center center",
+      pin: true,
+      toggleActions: "play play play play",
+      snap: {
+        snapTo: "center",
+        duration: 0.5,
+      },
+    },
+    
+  });
+
+}
+
+
+
+
+//sondage desktop
 
   //selection btn
 const btnEuro = document.querySelector('.euro');
@@ -168,8 +216,6 @@ btnInterro.addEventListener('click', function() {
   txtInterro.classList.add('visible');
   btnInterro.classList.add('etoile--svg');
 });
-
-
 
 
 
