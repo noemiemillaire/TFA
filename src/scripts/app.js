@@ -76,30 +76,6 @@ function parallax(){
 
 
 
-//anim titre recherche
-
-if (window.innerWidth >= 1000) {
-
-  titre__rech.forEach((boucle) => {
-
-  gsap.to(boucle, {
-    duration: 0.3,
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: boucle,
-      start: "top 95%",
-      toggleActions: "play none none none"
-    },
-  });
-
-});
-
-}
-
-
-
-
 //anim texte accent
 
 accentAll.forEach((boucle) => {
@@ -196,9 +172,8 @@ btnInterro.addEventListener('click', function() {
 
 
 
+
 //section video
-
-
 
 gsap.to(sectVideo, {
 
@@ -207,7 +182,7 @@ gsap.to(sectVideo, {
 
   scrollTrigger: {
     trigger: sectVideo,
-    start: "top 95%",
+    start: "top 90%",
     end: "center center",
     scrub:true,
     toggleActions: "play restart play restart",

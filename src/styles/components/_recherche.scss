@@ -41,6 +41,10 @@
             margin-right: 5%;
         }
 
+        .paragraphe--accent{
+            margin: 70px 0;
+        }
+
     }
 }
 
@@ -55,9 +59,10 @@
         align-items: flex-start;
         width: 100%;
 
+        margin-bottom: 190px;
+
         .recherche__text{
             width: 65%;
-            margin-bottom: 100px;
         }
     }
 
@@ -68,16 +73,18 @@
         .titre{
             margin-top: 13px;
             width: 35%;
-            transform: translateX(-30px);
-            opacity: 0;
         }
 
         .paragraphe{
-            margin-left: 0;
+            margin: 40px 0;
         }
 
         .recherche__text :nth-child(1){
             margin-top: 30px;
+        }
+
+        .paragraphe--accent{
+            margin: 100px 0;
         }
     }
 
