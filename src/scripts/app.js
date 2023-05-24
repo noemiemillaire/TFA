@@ -107,37 +107,18 @@ sondageImg.forEach((boucle) => {
       trigger: boucle,
       start: "top center",
       end: "90% 30%",
-      toggleActions: "play restart play restart",
+      toggleActions: "play restart reverse reset",
       onEnter: () => {
         boucle.classList.add("etoile--svg");
+      },
+      onLeave: () => {
+        boucle.classList.remove("etoile--svg");
       },
     },
 
   });
 
 });
-
-
-
-//pin mobile
-if (window.innerWidth < 1000) {
-
-  sondageEl.forEach((sondageList) => {
-
-    gsap.to(sondageList, {
-
-      scrollTrigger: {
-        trigger: sondageList,
-        start: "center center",
-        pin: true,
-        toggleActions: "play play play play",
-      },
-
-    });
-
-  });
-
-}
 
 
 //stop scroll sondage desktop
