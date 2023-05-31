@@ -17,7 +17,7 @@
         height: auto;
         background-color: #CFC1AB;
         border-radius: 18px;
-        transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+        transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .paragraphe--accent{
@@ -34,11 +34,10 @@
 
 //etat actif mobile
 .etoile--svg{
-    background-image: url(../../assets/images/etoiles.svg);
+    background-image: url("../assets/images/etoiles-sond.png");
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .etoile--svg.sond__img{
@@ -145,6 +144,7 @@
 
     .carre__el{
         cursor: pointer;
+        border-radius: 18px;
     }
 
 
@@ -157,10 +157,14 @@
     .sond__el{
         overflow: hidden;
         border-radius: 18px;
+
+        img{
+            border-radius: 18px;
+        }
     }
 
 
     .sond__el img:hover{
-            scale: 1.08;
+        scale: 1.08;
     }
 }

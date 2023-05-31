@@ -14,10 +14,8 @@ const parallaxEls = document.querySelectorAll(".ligne");
 
 const accentAll = document.querySelectorAll("#recherches .paragraphe--accent");
 
-const sondageEl = document.querySelectorAll(".sondage__el");
 const sondageImg = document.querySelectorAll(".sondage__el img");
 
-const sectVideo = document.querySelector('#video')
 
 
 
@@ -98,47 +96,33 @@ accentAll.forEach((boucle) => {
 
 
 //anim sondage
+if (window.innerWidth < 1000) {
 
-sondageImg.forEach((boucle) => {
+  sondageImg.forEach((boucle) => {
 
-  gsap.to(boucle, {
+    gsap.to(boucle, {
 
-    scrollTrigger: {
-      trigger: boucle,
-      start: "top center",
-      end: "90% 30%",
-      toggleActions: "play restart reverse reset",
-      onEnter: () => {
-        boucle.classList.add("etoile--svg");
+      scrollTrigger: {
+        trigger: boucle,
+        start: "top center",
+        end: "90% 30%",
+        onEnter: () => {
+          boucle.classList.add("etoile--svg");
+        },
+        onLeave: () => {
+          boucle.classList.remove("etoile--svg");
+        },
+        onEnterBack: () => {
+          boucle.classList.add("etoile--svg");
+        },
+        onLeaveBack: () => {
+          boucle.classList.remove("etoile--svg");
+        },
       },
-      onLeave: () => {
-        boucle.classList.remove("etoile--svg");
-      },
-    },
+
+    });
 
   });
-
-});
-
-
-//stop scroll sondage desktop
-if (window.innerWidth > 1000) {
-
-  gsap.to("#sondage", {
-
-    scrollTrigger: {
-      trigger: "#sondage",
-      start: "center center",
-      pin: true,
-      toggleActions: "play play play play",
-      snap: {
-        snapTo: "center",
-        duration: 0.5,
-      },
-    },
-    
-  });
-
 }
 
 
@@ -202,15 +186,15 @@ btnInterro.addEventListener('click', function() {
 
 //section video
 
-gsap.to(sectVideo, {
+gsap.to("#video", {
 
-  scale: 1.1,
-  borderRadius: "0%",
+  scale:1,
+  borderRadius: "0",
 
   scrollTrigger: {
-    trigger: sectVideo,
+    trigger: "#video",
     start: "top 90%",
-    end: "center center",
+    end: "70% 70%",
     scrub:true,
     toggleActions: "play restart play restart",
   },
