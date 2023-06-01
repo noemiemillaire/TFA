@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const menuBurger = document.querySelector('.menu__icon');
 const menu = document.querySelector('.nav')
 const menu__lien = document.querySelectorAll('.menu__el')
+const menuLinks = document.querySelectorAll('.menu__el a');
 
 const parallaxEls = document.querySelectorAll(".ligne");
 
@@ -34,6 +35,44 @@ menu__lien.forEach((lien) => {
 
 });
 
+
+
+
+//actif nav mobile
+if (window.innerWidth < 619) {
+  menuLinks.forEach((menuLink) => {
+
+    window.addEventListener('scroll', () => {
+
+      const activeSectionId = getActiveSectionId();
+
+
+      if (menuLink.getAttribute('href') === `#${activeSectionId}`) {
+
+        gsap.to(menuLink, { opacity: 1 });
+      } else {
+
+        gsap.to(menuLink, { opacity: 0.4});
+      }
+    });
+  });
+
+
+  function getActiveSectionId() {
+
+    const sections = document.querySelectorAll('section');
+
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        return section.id;
+      }
+    }
+
+    return null;
+  }
+}
 
 
 

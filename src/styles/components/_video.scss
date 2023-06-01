@@ -16,17 +16,24 @@
     width: 98%;
     border-radius: 18px;
     margin: 0;
-}
+    cursor: pointer;
+} 
+
+
+  
+  
+
 
 @media (min-width: 1000px){
 
     #video{
         width: calc(100% + 40px);
-        height: 115vh;  
-        margin-left: -20px;  
+        height: 130vh;  
+        margin-left: -20px; 
+        margin-bottom: 35%; 
     }
 
     .video__el{
-        width: 85%;
+        width: 70%;
     }
 }
