@@ -1,5 +1,9 @@
 #fonct{
     margin-bottom: 60%;
+
+    .desk{
+        display: none;
+    }
 }
 
 #fonct .fonct__el:first-of-type{
@@ -80,39 +84,68 @@
 
     #fonct{
         margin-bottom: 45%;
+
+        .mobile{
+            display: none;
+        }
+
+        .desk{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+    
+            box-shadow: unset;
+    
+            width: 100%;
+            margin: 180px 0;
+        }
     }
 
-    .fonct__el{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
 
-        box-shadow: unset;
-
-        height: 96vh;
-        width: 100%;
-        margin: 180px 0;
-    }
-
-    .fonct__illu{
+    .desk__illu{
         border-radius: 40px;
+        overflow: hidden;
 
         width: 40%;
-        height: 100%;
+        height: 93vh;
+        position: sticky;
+        top: 3.5vh;
+
+        background-color: #D7DE16;
+        overflow: hidden;
 
         img{
-            width: 65%;
+            width: 57%;
             margin-bottom: 0;
         }
     }
 
-    .fonct__text{
-        width: 60%;
+
+    .fonct__illu{
+        background-color: unset;
+        text-align: center;
+
         height: 100%;
-        padding: 0 0 0 20px;
+        padding: 0;
+    }
+
+    .desk__text{
+        width: 60%;
+
         box-sizing: border-box;
 
         text-align: left;
+    }
+
+    .cout{
+        margin: 140px 0;
+    }
+
+    .fonct__text{
+        height: 93vh;
+        padding: 0 0 0 20px;
+
         justify-content: space-between;
     }
 
