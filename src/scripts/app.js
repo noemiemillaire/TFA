@@ -224,37 +224,48 @@ btnInterro.addEventListener('click', function() {
 
 
 
-//scroll fonction desk
 
-const timeline1 = gsap.timeline();
-const timeline2 = gsap.timeline();
 
-timeline1.to("#recipe, #cout", {
-  y: "-100%",
-  duration: 0.6,
-  ease: "power3.out",
-});
+// scroll section fonction
 
-timeline2.to("#cout, #note", {
-  y: "-200%",
-  duration: 0.6,
-  ease: "power3.out",
-});
+const contElement = document.querySelector('.cont');
+
+
+const timeline = gsap.timeline();
+
 
 ScrollTrigger.create({
-  animation: timeline1,
-  trigger: ".cout .titre--small",
-  start: "top 60%",
-  end: "bottom 40%",
-  toggleActions: "play none reverse none",
+  animation: timeline,
+  trigger: '.cout .titre--small',
+  start: 'top 55%',
+  end: 'bottom 40%',
+  ease: 'power4.inOut',
+  toggleActions: 'play none reverse none',
+  onEnter: () => {
+
+    timeline.to(contElement, {
+      y: '-93vh',
+      duration: 0.4,
+    });
+  },
 });
 
+
 ScrollTrigger.create({
-  animation: timeline2,
-  trigger: ".note .titre--small",
-  start: "top 60%",
-  toggleActions: "play none reverse none",
+  animation: timeline,
+  trigger: '.note .titre--small',
+  start: 'top 55%',
+  ease: 'power4.inOut',
+  toggleActions: 'play none reverse none',
+  onEnter: () => {
+
+    timeline.to(contElement, {
+      y: '-186vh',
+      duration: 0.4,
+    });
+  },
 });
+
 
 
 
