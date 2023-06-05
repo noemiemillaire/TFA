@@ -231,12 +231,14 @@ const timeline2 = gsap.timeline();
 
 timeline1.to("#recipe, #cout", {
   y: "-100%",
-  duration: 0.4,
+  duration: 0.6,
+  ease: "power3.out",
 });
 
 timeline2.to("#cout, #note", {
   y: "-200%",
-  duration: 0.4,
+  duration: 0.6,
+  ease: "power3.out",
 });
 
 ScrollTrigger.create({
@@ -258,11 +260,12 @@ ScrollTrigger.create({
 
 
 
+
 //section video
 
 gsap.to("#video", {
 
-  scale:1,
+  scale:1.01,
   borderRadius: "0",
 
   scrollTrigger: {
