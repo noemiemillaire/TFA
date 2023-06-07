@@ -74,14 +74,9 @@
         background-color: #D7DE16;
 }
 
-.lign3 :nth-child(2), .lign1 :last-child{
+.lign3 :nth-child(2), .lign1 :last-child, .tabl__el.paragraphe :nth-child(1){
     background-color: #4D7C04;
 }
-
-.tabl__el.paragraphe :nth-child(1){
-        background-color: #4D7C04;
-}
-
 
 
 //tab
