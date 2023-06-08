@@ -76,18 +76,28 @@ if (window.innerWidth < 619) {
 
 
 
-//nav bar
+//nav bar hide
 
 var menuHide = window.pageYOffset;
+var delay = 0;
+var duration = 0.6;
+
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (menuHide > currentScrollPos) {
-    menu.style.top = "0";
+    setTimeout(function() {
+      menu.style.transitionDuration = duration + "s";
+      menu.style.top = "0";
+    }, delay);
   } else {
-    menu.style.top = "-65px";
+    menu.style.transitionDuration = duration + "s";
+    menu.style.top = "-72px";
   }
   menuHide = currentScrollPos;
-}
+};
+
+
+
 
 
 

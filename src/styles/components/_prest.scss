@@ -23,15 +23,15 @@
 .title__anim span{
     display: block;
     transform: translateY(100%) rotate(-2.5deg);
-    animation: up 1.4s .3s forwards cubic-bezier(0.22, 1, 0.36, 1);
+    animation: up 1.4s .5s forwards cubic-bezier(0.22, 1, 0.36, 1);
 }
  
 .title__anim:nth-child(2) span{
-    animation-delay: 0.4s;
+    animation-delay: 0.6s;
 }
  
 .title__anim:nth-child(3) span{
-    animation-delay: 0.5s;
+    animation-delay: 0.7s;
 }
  
 @keyframes up{
