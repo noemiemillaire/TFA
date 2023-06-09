@@ -246,16 +246,17 @@ const timeline = gsap.timeline();
 
 ScrollTrigger.create({
   animation: timeline,
-  trigger: '.cout .titre--small',
-  start: 'top 55%',
+  trigger: '.cout',
+  start: 'top 3.5%',
   end: 'bottom 40%',
   ease: 'power4.inOut',
+  pin:true,
   toggleActions: 'play none reverse none',
   onEnter: () => {
 
     timeline.to(contElement, {
       y: '-93vh',
-      duration: 0.4,
+      duration: 0.6,
     });
   },
 });
@@ -263,15 +264,16 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
   animation: timeline,
-  trigger: '.note .titre--small',
-  start: 'top 55%',
+  trigger: '.note',
+  start: 'top 3.5%',
   ease: 'power4.inOut',
+  pin:true,
   toggleActions: 'play none reverse none',
   onEnter: () => {
 
     timeline.to(contElement, {
       y: '-186vh',
-      duration: 0.4,
+      duration: 0.6,
     });
   },
 });
